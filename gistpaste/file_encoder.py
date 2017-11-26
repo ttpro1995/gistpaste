@@ -35,18 +35,18 @@ class FileEncoder:
         f.close()
 
 
-if __name__=="__main__":
-    parser = argparse.ArgumentParser(description='Encode file to text')
-    parser.add_argument('-m', '--mode', help='mode', required=True)
-    parser.add_argument('-i', '--input', help='Input filename', required=True)
-    parser.add_argument('-o', '--output', help='Output filename', default=None , required=False)
-    args = parser.parse_args()
-
-    if args.mode == "encode":
-        encoded = FileEncoder.encode_file_to_text(args.input, args.output)
-        if args.output is None:
-            print(encoded)
-    elif args.mode == "decode":
-        FileEncoder.decode_text_to_file(args.input, args.output)
+# if __name__=="__main__":
+#     parser = argparse.ArgumentParser(description='Encode file to text')
+#     parser.add_argument('-m', '--mode', help='mode', required=True)
+#     parser.add_argument('-i', '--input', help='Input filename', required=True)
+#     parser.add_argument('-o', '--output', help='Output filename', default=None, required=False)
+#     args = parser.parse_args()
+#
+#     if args.mode == "encode":
+#         encoded = FileEncoder.encode_file_to_text(args.input, args.output)
+#         if args.output is None:
+#             print(encoded)
+#     elif args.mode == "decode":
+#         FileEncoder.decode_text_to_file(args.input, args.output)
 
 

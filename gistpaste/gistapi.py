@@ -4,7 +4,7 @@ import json
 
 class GistApi:
     """Wrapper for gist api"""
-    def __init__(self, client_id = None, client_secret= None):
+    def __init__(self, client_id=None, client_secret=None):
         """
         :param client_id: client_id on gist
         :param client_secret: client_secret on gist

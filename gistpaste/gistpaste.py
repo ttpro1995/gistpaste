@@ -1,10 +1,11 @@
 from gistpaste import GistApi
 from gistpaste import FileEncoder
 import os
-class GistPaste:
 
-    """Wrapper for gist api"""
-    def __init__(self, client_id = None, client_secret= None):
+
+class GistPaste:
+    """Upload and download anyfile to gist"""
+    def __init__(self, client_id=None, client_secret=None):
         """
         :param client_id: client_id on gist
         :param client_secret: client_secret on gist
@@ -42,5 +43,5 @@ class GistPaste:
         files_data = self.gistapi.download(url)
 
         for filename, content in files_data:
-            real_file_name = filename[:-4] # remove .txt
+            real_file_name = filename[:-4]  # remove .txt
             FileEncoder.decode_text_to_file(content, os.path.join(filedir, real_file_name))
